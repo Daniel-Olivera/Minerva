@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-minerva-dev-162658-authRole",
+      "UnauthRoleArn": "arn:aws:iam::343605449037:role/amplify-minerva-dev-162658-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::343605449037:role/amplify-minerva-dev-162658-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-minerva-dev-162658-deployment",
+      "UnauthRoleName": "amplify-minerva-dev-162658-unauthRole",
+      "StackName": "amplify-minerva-dev-162658",
+      "StackId": "arn:aws:cloudformation:us-east-1:343605449037:stack/amplify-minerva-dev-162658/71bf6410-baec-11ed-ad7f-0ac6fd1c8b31",
+      "AmplifyAppId": "d2u92nwtrbr4im"
+    }
+  }
+}
