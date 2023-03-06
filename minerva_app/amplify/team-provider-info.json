@@ -36,13 +36,12 @@
         "minerva1a027053CustomMessage": {
           "REDIRECTURL": "https://main.d2u92nwtrbr4im.amplifyapp.com",
           "EMAILSUBJECT": "Please Verify Your Minerva Account",
-          "CODECLICKEMAILMESSAGE": "Your verification code is :    ",
-          "LINKCLICKEMAILMESSAGE": "\nPlease click on the link below to verify your email address \n",
+          "EMAILMESSAGE": "Click the link below to confirm account creation   ",
           "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
-          "s3Key": "amplify-builds/minerva1a027053CustomMessage-6d4a427639366e2f6e38-build.zip"
+          "s3Key": "amplify-builds/minerva1a027053CustomMessage-2b6436595547474c344e-build.zip"
         },
         "minerva1a027053PostConfirmation": {
-          "GROUP": "educators",
+          "GROUP": "teachers",
           "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
           "s3Key": "amplify-builds/minerva1a027053PostConfirmation-5359522b587358705477-build.zip"
         }

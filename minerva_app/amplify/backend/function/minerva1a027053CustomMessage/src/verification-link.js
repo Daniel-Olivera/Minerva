@@ -32,8 +32,10 @@ exports.handler = async (event) => {
       }),
     ).toString('base64');
     // eslint-disable-next-line spellcheck/spell-checker
-    //const url = `${bucketUrl}/?data=${payload}&code=${codeParameter}`;
-    const message = `${process.env.CODECLICKEMAILMESSAGE} ${codeParameter} \n  ${LINKCLICKMESSAGE} ${redirectUrl}`;
+    // const message = `${process.env.CODECLICKEMAILMESSAGE} ${codeParameter} \n  ${LINKCLICKMESSAGE} ${redirectUrl}`;
+    const bucketUrl = `http://${resourcePrefix}verificationbucket-${process.env.ENV}.s3-website${separator}${region}.amazonaws.com`;
+    const url = `${bucketUrl}/?data=${payload}&code=${codeParameter}`;
+    const message = `${process.env.EMAILMESSAGE}. \n ${url}`;
     event.response.smsMessage = message;
     event.response.emailSubject = process.env.EMAILSUBJECT;
     event.response.emailMessage = message;

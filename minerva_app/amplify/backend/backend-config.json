@@ -136,7 +136,7 @@
         }
       ]
     },
-    "AMPLIFY_function_minerva1a027053CustomMessage_CODECLICKEMAILMESSAGE": {
+    "AMPLIFY_function_minerva1a027053CustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {
           "category": "function",
@@ -145,14 +145,6 @@
       ]
     },
     "AMPLIFY_function_minerva1a027053CustomMessage_EMAILSUBJECT": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "minerva1a027053CustomMessage"
-        }
-      ]
-    },
-    "AMPLIFY_function_minerva1a027053CustomMessage_LINKCLICKEMAILMESSAGE": {
       "usedBy": [
         {
           "category": "function",
