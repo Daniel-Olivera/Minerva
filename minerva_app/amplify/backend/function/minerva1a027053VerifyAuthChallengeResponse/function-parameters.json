@@ -1,0 +1,18 @@
+{
+  "trigger": true,
+  "modules": [
+    "captcha-verify"
+  ],
+  "parentResource": "minerva1a027053",
+  "functionName": "minerva1a027053VerifyAuthChallengeResponse",
+  "resourceName": "minerva1a027053VerifyAuthChallengeResponse",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/VerifyAuthChallengeResponse",
+  "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
+  "triggerEventPath": "VerifyAuthChallengeResponse.event.json",
+  "roleName": "minerva1a027053VerifyAuthChallengeResponse",
+  "skipEdit": true,
+  "RECAPTCHASECRET": "6Ld4x9UkAAAAADKHphp-nT8G95mlHWY9t-xES02L",
+  "enableCors": false
+}

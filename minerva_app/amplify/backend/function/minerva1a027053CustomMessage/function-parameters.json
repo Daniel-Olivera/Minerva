@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "minerva1a027053",
+  "functionName": "minerva1a027053CustomMessage",
+  "resourceName": "minerva1a027053CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "minerva1a027053CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://main.d2u92nwtrbr4im.amplifyapp.com",
+  "EMAILSUBJECT": "Please Verify Your Minerva Account",
+  "EMAILMESSAGE": "Click the link below to confirm account creation   ",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

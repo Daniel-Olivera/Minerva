@@ -9,7 +9,44 @@
       "UnauthRoleName": "amplify-minerva-dev-162658-unauthRole",
       "StackName": "amplify-minerva-dev-162658",
       "StackId": "arn:aws:cloudformation:us-east-1:343605449037:stack/amplify-minerva-dev-162658/71bf6410-baec-11ed-ad7f-0ac6fd1c8b31",
-      "AmplifyAppId": "d2u92nwtrbr4im"
+      "AmplifyAppId": "d2u92nwtrbr4im",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-minerva-dev-162658-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "api": {
+        "test": {}
+      },
+      "auth": {
+        "minerva1a027053": {}
+      },
+      "function": {
+        "minerva1a027053DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
+          "s3Key": "amplify-builds/minerva1a027053DefineAuthChallenge-312f2f2f75444f633970-build.zip"
+        },
+        "minerva1a027053CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
+          "s3Key": "amplify-builds/minerva1a027053CreateAuthChallenge-376c574334434b436574-build.zip"
+        },
+        "minerva1a027053VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "6Ld4x9UkAAAAADKHphp-nT8G95mlHWY9t-xES02L",
+          "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
+          "s3Key": "amplify-builds/minerva1a027053VerifyAuthChallengeResponse-5955674d526c75653865-build.zip"
+        },
+        "minerva1a027053CustomMessage": {
+          "REDIRECTURL": "https://main.d2u92nwtrbr4im.amplifyapp.com",
+          "EMAILSUBJECT": "Please Verify Your Minerva Account",
+          "CODECLICKEMAILMESSAGE": "Your verification code is :    ",
+          "LINKCLICKEMAILMESSAGE": "\nPlease click on the link below to verify your email address \n",
+          "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
+          "s3Key": "amplify-builds/minerva1a027053CustomMessage-6d4a427639366e2f6e38-build.zip"
+        },
+        "minerva1a027053PostConfirmation": {
+          "GROUP": "educators",
+          "deploymentBucketName": "amplify-minerva-dev-162658-deployment",
+          "s3Key": "amplify-builds/minerva1a027053PostConfirmation-5359522b587358705477-build.zip"
+        }
+      }
     }
   }
 }

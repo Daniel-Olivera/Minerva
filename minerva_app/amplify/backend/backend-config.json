@@ -1,1 +1,252 @@
-{}
+{
+  "api": {
+    "test": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "minerva1a027053": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "minerva1a027053DefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "minerva1a027053CreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "minerva1a027053VerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "minerva1a027053PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "minerva1a027053CreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "minerva1a027053CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "minerva1a027053DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "minerva1a027053PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "minerva1a027053VerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_minerva1a027053CreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_CODECLICKEMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_LINKCLICKEMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053DefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053DefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053VerifyAuthChallengeResponse_RECAPTCHASECRET": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053VerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_minerva1a027053VerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "minerva1a027053VerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}
