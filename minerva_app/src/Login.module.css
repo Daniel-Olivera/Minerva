@@ -1,0 +1,145 @@
+element {
+  --inputFontSize: 1em;
+  --inputLabelFontSize : 2em;
+}
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 100vh;
+}
+
+.student_signin {
+  background: #f1f7fe;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 90vh;
+  max-width: 400px;
+  border-radius: 30px;
+  box-shadow: 0 0 8em #7415b4;
+}
+
+.student_signin .logo {
+  margin: 2em;
+  margin-bottom: 1em;
+  align-self: center;
+}
+.student_signin .inputcontainer {
+  align-self: center;
+  background: white;
+  box-shadow: 0 0 2em #c4c7d6;
+  margin-bottom: 0.6em;
+  padding-top: 0.5em;
+  width: 90%;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 15px;
+  color: #870373;
+}
+
+.student_signin .containerlabel {
+  font-size: 1em;
+  padding: 0.3em;
+  padding-left: 0.5em;
+  margin: 0;
+}
+
+.student_signin .inputcontainer .email {
+  width: 100%;
+  outline: none;
+  border-radius: 0px 0px 15px 15px;
+  border-color: transparent;
+  padding: 0.3em;
+  padding-left: 0.5em;
+}
+.student_signin hr {
+  margin-top: -0.2em;
+  margin-bottom: 0;
+  color: #5e5e5e;
+  opacity: calc(0.3);
+}
+.student_signin .email input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .email input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+
+.student_signin .inputcontainer .password {
+  width: 100%;
+  outline: none;
+  border-radius: 0px 0px 15px 15px;
+  border-color: transparent;
+  padding: 0.3em;
+  padding-left: 0.5em;
+}
+
+.student_signin .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.student_signin .password ion-icon {
+  margin-bottom: -0.2em;
+}
+.student_signin .password .show-hide {
+  margin-right: -5em;
+}
+.student_signin .login {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.student_signin p {
+  align-self: center;
+}
+
+.student_signin .footer a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  display: flex;
+  margin-top: 2em;
+  padding-bottom: 10em;
+}
+.student_signin .footer span {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
