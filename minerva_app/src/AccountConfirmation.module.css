@@ -1,0 +1,87 @@
+element {
+    --inputFontSize: 1em;
+    --inputLabelFontSize : 2em;
+  }
+  
+  * {
+    font-family: "Poppins";
+  }
+  
+  body {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100vh;
+  }
+  
+  .account_confirmation {
+    background: #f1f7fe;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 90vh;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 0 8em #7415b4;
+  }
+
+.account_confirmation .logo {
+    margin: 2em;
+    margin-bottom: 1em;
+    align-self: center;
+  }
+
+  .account_confirmation .inputcontainer {
+    align-self: center;
+    background: white;
+    box-shadow: 0 0 2em #c4c7d6;
+    margin-bottom: 0.6em;
+    padding-top: 0.5em;
+    width: 90%;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 15px;
+    color: #870373;
+  }
+
+  .account_confirmation .containerlabel {
+    font-size: 1em;
+    padding: 0.3em;
+    padding-left: 0.5em;
+    margin: 0;
+  }
+
+  .account_confirmation hr {
+    margin-top: -0.2em;
+    margin-bottom: 0;
+    color: #5e5e5e;
+    opacity: calc(0.3);
+  }
+  
+  .account_confirmation .inputcontainer input {
+    width: 100%;
+    outline: none;
+    font-size: 1em;
+    border-radius: 0px 0px 15px 15px;
+    border-color: transparent;
+    padding: 0.3em;
+    padding-left: 0.5em;
+  }
+
+  .account_confirmation button {
+    padding: 1em;
+    margin-top: 1em;
+    background: #3e4684;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+  }
+

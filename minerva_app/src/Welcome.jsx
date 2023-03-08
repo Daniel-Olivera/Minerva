@@ -10,6 +10,7 @@ const Welcome = () => {
           <div className={styles.box}>
             <NavLink to="/Login">Log in</NavLink>
             <NavLink to="/SignUp">Sign Up</NavLink>
+            <NavLink to="/AccountConfirmation">Debug Link</NavLink>
           </div>
         </div>
     )

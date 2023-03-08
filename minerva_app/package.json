@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^4.3.9",
+    "amazon-cognito-identity-js": "^6.1.2",
     "aws-amplify": "^5.0.16",
+    "local-storage": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",

@@ -1,16 +1,20 @@
 /* src/signup.js */
 import React, { useEffect, useState, Component, useRef } from 'react'
 import styles from './SignUp.module.css'
-import { HashRouter, NavLink } from 'react-router-dom';
+import { HashRouter, Navigate, NavLink } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
-
+import { useAuth } from './AuthUtils';
 
 function signUp(params) {
   console.log(params)
 }
 
 const SignUp = () =>  {   
-  
+  const { currUser, login } = useAuth()
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const passRef = useRef(null)
+
   const amplifySignInRef = useRef();
   const setAmplifySignInRef = (node) => {
     if (node) {
@@ -23,39 +27,37 @@ const SignUp = () =>  {
       }
     }
   };
-  
-  const nameRef = useRef(null)
-  const emailRef = useRef(null)
-  const passRef = useRef(null)
-  
+
+
   const handleStuSignIn = async (ev) => {
-    console.log(nameRef.current.value)
-    console.log(emailRef.current.value)
-    console.log(passRef.current.value)
     
     const authData = {
       username: emailRef.current.value,
       password: passRef.current.value,
       attributes: {
         name: nameRef.current.value,
-        'custom:role': "Student",
-      }
-      
+        'custom:role': "student",
+      }  
     }
     
     try {
       const {user} = await Auth.signUp(authData)
-      if (user.userConfirmed) {
-        console.log("USERSIGNED IN")
-      }
+      login(user)
+      localStorage.setItem('currentUser',Json.stringify(user))
+      Navigate({
+        to:'./AccountConfirmation'
+      })
     } catch (e) {
       console.log(e)
     }
+    console.log(currUser)
   }
 
-const handleEduSignIn = () => {
-  
-}
+
+useEffect(() => {
+  localStorage.setItem('currUser',JSON.stringify(currUser))
+},[currUser])
+
 
   return(
   <>

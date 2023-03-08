@@ -11,15 +11,15 @@ import awsconfig from "./aws-exports";
 import {useAuth } from "./AuthUtils";
 import Login from './Login';
 import SignUp from './SignUp';
+import AccountConfirmation from './AccountConfirmation';
 
 Amplify.configure(awsconfig)
 Amplify.configure(awsExports);
 
 
 function RequireAuth({ children }) {
-  const { authed } = useAuth();
-  const location = useLocation();
-  return authed === true 
+  const { currUser } = useAuth();
+  return authed.isSigneIn === true 
   ? children 
   :  <Navigate to="/Login"/>;
 }
@@ -33,6 +33,7 @@ class App extends Component {
           <Route path ="/" element={<Welcome/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/SignUp" element={<SignUp/>}/>
+          <Route path="/AccountConfirmation" element={<AccountConfirmation/>}/>
           <Route path ="/Todo" element={
             <RequireAuth>
               <Todo/> 

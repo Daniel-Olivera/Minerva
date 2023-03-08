@@ -1,37 +1,26 @@
-import * as React from "react";
+import  React, {useState} from "react";
 import { Auth } from "aws-amplify";
-
+import {CognitoUser} from 'amazon-cognito-identity-js'
 
 const authContext = React.createContext();
-
 export function useAuth() {
-  const [authed, setAuthed] = React.useState(false);
+  const [currUser, setUser] = useState();
   return {
-    authed,
-    login() {
-      return new Promise((res) => {
-        setAuthed(true);
-        res();
-      });
+    currUser,
+    login(u) {
+      setUser(u)
     },
     logout() {
-      return new Promise((res) => {
-        setAuthed(false);
-        res();
-      });
-    },
+        setUser(null);
+    }
   };
 }
 
-
-
 export function AuthProvider({ children }) {
   const auth = useAuth();
-
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 
-
-export default function AuthConsumer() {
+export function AuthConsumer() {
     return React.useContext(authContext);
 }
