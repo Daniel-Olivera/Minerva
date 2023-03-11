@@ -11,5 +11,8 @@ export default defineConfig({
     alias: {
       './runtimeConfig': './runtimeConfig.browser',
     },
-  }
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 })

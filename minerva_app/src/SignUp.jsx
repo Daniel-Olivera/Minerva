@@ -1,15 +1,14 @@
 /* src/signup.js */
 import React, { useEffect, useState, Component, useRef } from 'react'
 import styles from './SignUp.module.css'
-import { HashRouter, Navigate, NavLink } from 'react-router-dom';
+import { HashRouter, Navigate, useNavigate, NavLink } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { useAuth } from './AuthUtils';
+import logo from './assets/minerva.svg'
 
-function signUp(params) {
-  console.log(params)
-}
 
 const SignUp = () =>  {   
+  const navigate = useNavigate()
   const { currUser, login } = useAuth()
   const nameRef = useRef(null)
   const emailRef = useRef(null)
@@ -29,8 +28,7 @@ const SignUp = () =>  {
   };
 
 
-  const handleStuSignIn = async (ev) => {
-    
+  const handleStuSignUp = async (ev) => {
     const authData = {
       username: emailRef.current.value,
       password: passRef.current.value,
@@ -42,22 +40,14 @@ const SignUp = () =>  {
     
     try {
       const {user} = await Auth.signUp(authData)
-      login(user)
-      localStorage.setItem('currentUser',Json.stringify(user))
-      Navigate({
-        to:'./AccountConfirmation'
-      })
+      localStorage.setItem('userEmail',(user.getUsername()))
+      navigate("/AccountConfirmation")
     } catch (e) {
       console.log(e)
+
     }
-    console.log(currUser)
+    console.log("signed in user is " + JSON.stringify(currUser))
   }
-
-
-useEffect(() => {
-  localStorage.setItem('currUser',JSON.stringify(currUser))
-},[currUser])
-
 
   return(
   <>
@@ -66,7 +56,7 @@ useEffect(() => {
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     />
     <div className={styles.student_signup}>
-      <img className={styles.logo} width={150} height={150} src='src/assets/minerva.svg'/>
+      <img className={styles.logo} width={150} height={150} src={logo}/>
       <div className={styles.inputcontainer}>
         <p className={styles.containerlabel}>Username</p>
         <hr/>
@@ -83,7 +73,7 @@ useEffect(() => {
         <input className={styles.password} ref={passRef} type="password" name="password" placeholder="············"/>
       </div>
       <br height='5px'/>
-      <button className={styles.signup} onClick={handleStuSignIn}>Sign Up As Student</button>
+      <button className={styles.signup} onClick={handleStuSignUp}>Sign Up As Student</button>
       <p  color='black'>or</p>
       <button className={styles.signup}>Sign Up As Educator</button>
       <div className={styles.footer}>
